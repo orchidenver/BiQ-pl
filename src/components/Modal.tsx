@@ -83,6 +83,6 @@ export default function Modal({ btnText, open, onClose }: ModalProps) {
         )}
       </div>
     </>,
-    document.getElementById("portal")!
+    document.getElementById("modal")!
   );
 }

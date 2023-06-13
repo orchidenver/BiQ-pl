@@ -6,6 +6,7 @@ import TextBlock from "../components/TextBlock";
 import ImgComponent from "../components/ImgComponent";
 import Composition from "../components/Composition";
 import { useAppContext } from "../context/context";
+import { Helmet } from "react-helmet";
 
 import "./MainPage.css";
 
@@ -19,6 +20,13 @@ export default function MainPage() {
 
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="BiQ Still - is a site about the power of still water"
+        />
+        <title>BiQ Still</title>
+      </Helmet>
       <Banner />
       <div className="moto">
         <h1
