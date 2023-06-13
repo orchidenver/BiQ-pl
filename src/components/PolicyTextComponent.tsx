@@ -1,10 +1,7 @@
 import * as React from "react";
-import "../components/PolicyTextComponent.css";
+import { PolicyTextProps } from "../interfaces";
 
-export interface PolicyTextProps {
-  subhead: string;
-  children: string;
-}
+import "../components/PolicyTextComponent.css";
 
 export default function PolicyTextComponent({
   subhead,

@@ -1,11 +1,7 @@
 import * as React from "react";
-import "./TextBlock.css";
+import { TextBlockProps } from "../interfaces";
 
-interface TextBlockProps {
-  children: string | JSX.Element;
-  header?: string;
-  element?: string;
-}
+import "./TextBlock.css";
 
 export default function TextBlock({
   children,

@@ -38,10 +38,7 @@ export default function Cart({ open }: CartProps) {
             </div>
             <div className="product-info">
               <div className="product-desc">
-                <p
-                  className="product-name"
-                  // style={{ fontSize: lang === "ENG" ? "16px" : "11px" }}
-                >
+                <p className="product-name">
                   {lang === "ENG" ? "Bottle" : "Butelka"}
                 </p>
                 <p className="product-capacity">{`${bottles.capacity}L`}</p>
@@ -87,10 +84,7 @@ export default function Cart({ open }: CartProps) {
             </div>
             <div className="product-info">
               <div className="product-desc">
-                <p
-                  className="product-name"
-                  // style={{ fontSize: lang === "ENG" ? "16px" : "11px" }}
-                >
+                <p className="product-name">
                   {lang === "ENG" ? (
                     <span>Box 9pcs</span>
                   ) : (

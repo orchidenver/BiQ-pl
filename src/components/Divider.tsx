@@ -1,10 +1,6 @@
 import * as React from "react";
 import "./Divider.css";
-
-interface DividerProps {
-  color?: string;
-  margin?: string;
-}
+import { DividerProps } from "../interfaces";
 
 export default function Divider({ color, margin }: DividerProps) {
   return (

@@ -1,11 +1,6 @@
 import * as React from "react";
+import { ImgComponentProps } from "../interfaces";
 import "./ImgComponent.css";
-
-export interface ImgComponentProps {
-  link: string;
-  altText: string;
-  banner?: boolean;
-}
 
 export default function ImgComponent({
   link,

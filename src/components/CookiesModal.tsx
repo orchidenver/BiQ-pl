@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useAppContext } from "../context/context";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";

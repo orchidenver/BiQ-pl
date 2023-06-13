@@ -3,14 +3,9 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router";
 import { useAppContext } from "../context/context";
+import { ModalProps } from "../interfaces";
 
 import "./Modal.css";
-
-export interface ModalProps {
-  btnText?: string;
-  open?: boolean;
-  onClose: () => void;
-}
 
 export default function Modal({ btnText, open, onClose }: ModalProps) {
   const [cartEmailValue, setCartEmailValue] = useState<

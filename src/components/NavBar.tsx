@@ -3,16 +3,12 @@ import Cart from "./Cart";
 import { useAppContext } from "../context/context";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import logo from "../assets/logo-small.svg";
-import logon from "../assets/Logo_BiQ-new.svg";
+import logo from "../assets/Logo_BiQ-new.svg";
 import shop from "../assets/shop.svg";
 import close from "../assets/close.svg";
 import arrow from "../assets/arrow-down.svg";
 
-export interface NavBar {}
-
-export default function NavBar(props: NavBar) {
-  const [menuVisible, setMenuVisible] = useState<boolean>(false);
+export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const { changeLang, lang, cartVisible, openCart } = useAppContext();
 
@@ -38,7 +34,7 @@ export default function NavBar(props: NavBar) {
           </div>
         )}
         <Link to="/" className="navbar-logo">
-          <img src={logon} alt="logo" />
+          <img src={logo} alt="logo" />
         </Link>
         <button className="cart" onClick={openCart}>
           <img
