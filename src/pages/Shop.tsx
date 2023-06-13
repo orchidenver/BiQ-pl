@@ -1,11 +1,10 @@
-import { useState, useEffect } from "react";
 import Banner from "../components/Banner";
 import Composition from "../components/Composition";
-import Footer from "../components/Footer";
 import ImgComponent from "../components/ImgComponent";
 import Divider from "../components/Divider";
-import logo from "../assets/logo.jpg";
 import { useAppContext } from "../context/context";
+
+import logo from "../assets/logo.jpg";
 
 import "./Shop.css";
 

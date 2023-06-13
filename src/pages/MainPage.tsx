@@ -6,7 +6,9 @@ import TextBlock from "../components/TextBlock";
 import ImgComponent from "../components/ImgComponent";
 import Composition from "../components/Composition";
 import { useAppContext } from "../context/context";
+
 import "./MainPage.css";
+
 import productImg from "../assets/product-example.jpg";
 import productImg2 from "../assets/product-example-2.jpg";
 import logo from "../assets/logo.jpg";

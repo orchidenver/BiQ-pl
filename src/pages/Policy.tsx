@@ -4,9 +4,7 @@ import { useAppContext } from "../context/context";
 
 import "../pages/Policy.css";
 
-export interface PolicyProps {}
-
-export default function Policy(props: PolicyProps) {
+export default function Policy() {
   const { lang } = useAppContext();
   return (
     <section className="policy">
