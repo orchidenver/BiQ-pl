@@ -1,87 +1,11 @@
 import { createContext, useContext, useState, useEffect, useMemo } from "react";
-
-interface CartProviderInterface {
-  children: JSX.Element;
-}
-
-interface CartInterface {
-  bottles: {
-    name: string;
-    capacity: string | undefined;
-    quantity: number;
-    price: number;
-    totalSum: number;
-  };
-  boxes: {
-    name: string;
-    capacity: string | undefined;
-    quantity: number;
-    price: number;
-    totalSum: number;
-  };
-}
-
-interface PricesInterface {
-  bottles: {
-    price: {
-      pl: {
-        [name: string]: number;
-      };
-    };
-  };
-  boxes: {
-    price: {
-      pl: {
-        [name: string]: number;
-      };
-    };
-  };
-}
-
-interface InitialStateInterface {
-  cart: CartInterface;
-  totalItems: number;
-  totalCartSum: number;
-  removeItem: (product: string) => void;
-  updateOrder: (newQuantity: number, product: string) => void;
-  resetOrder: () => void;
-  calcTotalSumPerProduct: (product: string) => void;
-  updateCapacity: (capacity: string | undefined) => void;
-  increaseBottle: () => void;
-  increaseBox: () => void;
-  decreaseBottle: () => void;
-  decreaseBox: () => void;
-  changeLang: (e: React.MouseEvent<HTMLElement>) => void;
-  lang: string | null;
-  cartVisible: boolean;
-  openCart: () => void;
-  changePrice: (price: string) => void;
-}
-
-function getCartLocalStorage() {
-  let cart = localStorage.getItem("cart");
-
-  if (cart) {
-    return JSON.parse(localStorage.getItem("cart")!);
-  } else {
-    return {
-      bottles: {
-        name: "Bottle",
-        capacity: "1.0",
-        quantity: 0,
-        price: 1.6,
-        totalSum: 0,
-      },
-      boxes: {
-        name: "Box",
-        capacity: "1.0",
-        quantity: 0,
-        price: 9.6,
-        totalSum: 0,
-      },
-    };
-  }
-}
+import {
+  CartProviderInterface,
+  CartInterface,
+  PricesInterface,
+  InitialStateInterface,
+} from "../interfaces";
+import getCartLocalStorage from "../helpers";
 
 const prices: PricesInterface = {
   bottles: {

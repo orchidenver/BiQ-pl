@@ -29,3 +29,61 @@ export interface TextBlockProps {
   header?: string;
   element?: string;
 }
+
+export interface CartProviderInterface {
+  children: JSX.Element;
+}
+
+export interface CartInterface {
+  bottles: {
+    name: string;
+    capacity: string | undefined;
+    quantity: number;
+    price: number;
+    totalSum: number;
+  };
+  boxes: {
+    name: string;
+    capacity: string | undefined;
+    quantity: number;
+    price: number;
+    totalSum: number;
+  };
+}
+
+export interface PricesInterface {
+  bottles: {
+    price: {
+      pl: {
+        [name: string]: number;
+      };
+    };
+  };
+  boxes: {
+    price: {
+      pl: {
+        [name: string]: number;
+      };
+    };
+  };
+}
+
+export interface InitialStateInterface {
+  cart: CartInterface;
+  totalItems: number;
+  totalCartSum: number;
+  removeItem: (product: string) => void;
+  updateOrder: (newQuantity: number, product: string) => void;
+  resetOrder: () => void;
+  calcTotalSumPerProduct: (product: string) => void;
+  updateCapacity: (capacity: string | undefined) => void;
+  increaseBottle: () => void;
+  increaseBox: () => void;
+  decreaseBottle: () => void;
+  decreaseBox: () => void;
+  changeLang: (e: React.MouseEvent<HTMLElement>) => void;
+  lang: string | null;
+  cartVisible: boolean;
+  openCart: () => void;
+  changePrice: (price: string) => void;
+}

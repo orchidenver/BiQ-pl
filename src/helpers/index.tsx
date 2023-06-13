@@ -1,41 +1,26 @@
-import { useEffect, useState } from "react";
+function getCartLocalStorage() {
+  let cart = localStorage.getItem("cart");
 
-function useMediaQuery(query: string): boolean {
-  const getMatches = (query: string): boolean => {
-    if (typeof window !== "undefined") {
-      return window.matchMedia(query).matches;
-    }
-    return false;
-  };
-
-  const [matches, setMatches] = useState<boolean>(getMatches(query));
-
-  function handleChange() {
-    setMatches(getMatches(query));
-  }
-
-  useEffect(() => {
-    const matchMedia = window.matchMedia(query);
-
-    handleChange();
-
-    if (matchMedia.addListener) {
-      matchMedia.addListener(handleChange);
-    } else {
-      matchMedia.addEventListener("change", handleChange);
-    }
-
-    return () => {
-      if (matchMedia.removeListener) {
-        matchMedia.removeListener(handleChange);
-      } else {
-        matchMedia.removeEventListener("change", handleChange);
-      }
+  if (cart) {
+    return JSON.parse(localStorage.getItem("cart")!);
+  } else {
+    return {
+      bottles: {
+        name: "Bottle",
+        capacity: "1.0",
+        quantity: 0,
+        price: 1.6,
+        totalSum: 0,
+      },
+      boxes: {
+        name: "Box",
+        capacity: "1.0",
+        quantity: 0,
+        price: 9.6,
+        totalSum: 0,
+      },
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
-
-  return matches;
+  }
 }
 
-export default useMediaQuery;
+export default getCartLocalStorage;
