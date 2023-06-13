@@ -1,34 +1,14 @@
-import { useState, useEffect } from "react";
-import Divider from "./Divider";
+import { useState } from "react";
 import { useAppContext } from "../context/context";
+import Divider from "./Divider";
 import Modal from "./Modal";
+import { CartProps } from "../interfaces";
 
 import bottleImg from "../assets/bottle-shop.jpg";
 import boxImg from "../assets/box-shop-small.jpg";
 import removeImg from "../assets/remove.svg";
 
 import "./Cart.css";
-
-export interface CartProps {
-  open: boolean;
-}
-
-interface CartInterface {
-  bottles: {
-    name: string;
-    capacity: string | undefined;
-    quantity: number;
-    price: number;
-    totalSum: number;
-  };
-  boxes: {
-    name: string;
-    capacity: string | undefined;
-    quantity: number;
-    price: number;
-    totalSum: number;
-  };
-}
 
 export default function Cart({ open }: CartProps) {
   const {
