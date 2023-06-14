@@ -116,7 +116,8 @@ export default function Shop() {
             <Divider color="#000000" margin="20px 0" />
             <div className="shop-item">
               <p className="shop-product">
-                {lang === "ENG" ? "Box" : "Opakowanie "}{" "}
+                {lang === "ENG" ? "Box" : "Opakowanie "}
+                <br />
                 <span className="currency">
                   (9 {lang === "ENG" ? "pcs" : "szt."})
                 </span>

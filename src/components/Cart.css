@@ -66,7 +66,7 @@
 }
 
 .product-name {
-  font-family: "StolzlBold";
+  font-family: "NexaHeavy";
   font-weight: 900;
   font-size: 20px;
 }
@@ -96,7 +96,7 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 100%;
   width: 35vw;
 }
@@ -138,7 +138,7 @@
 .product-actions {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 100%;
   width: 25vw;
 }
@@ -149,6 +149,7 @@
   font-weight: 400;
   color: #152236;
   font-size: 20px;
+  line-height: 35px;
 }
 
 .product-price {
