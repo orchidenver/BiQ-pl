@@ -25,9 +25,9 @@ export default function Composition() {
   return (
     <>
       <div className="container">
-        <div className="item item-bold" id="item-head">
+        <section className="item item-bold" id="item-head">
           {lang === "ENG" ? "Countries of origin" : "Kraje pochodzenia"}
-        </div>
+        </section>
         <div className="item">Serbia</div>
       </div>
       <Divider />

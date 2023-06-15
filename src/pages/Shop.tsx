@@ -31,7 +31,7 @@ export default function Shop() {
       </Helmet>
       <main>
         <Banner />
-        <div className="shop">
+        <section className="shop">
           <p className="shop-head">{lang === "ENG" ? "STILL" : "WODA"}</p>
           <p className="shop-head">
             {lang === "ENG" ? "WATER" : "NIEGAZOWANA"}
@@ -148,7 +148,7 @@ export default function Shop() {
               <span>{lang === "ENG" ? "Add to cart" : "Dodaj do koszyka"}</span>
             </div>
           </button>
-        </div>
+        </section>
 
         <ImgComponent link={logo} altText="logo" banner={false} />
         <Composition />
