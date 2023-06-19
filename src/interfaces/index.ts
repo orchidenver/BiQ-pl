@@ -114,19 +114,3 @@ export interface OrderInterface {
   cart: ItemInOrderInterface[];
   email: string;
 }
-
-const obj = {
-  cart: [
-    {
-      id: 1,
-      title: { en: "Still", pl: "Woda Niegazowana" },
-      type: "still",
-      amount: 0.3,
-      price: { en: 0.9, pl: 3.9 },
-      package: "bottle",
-      image: "/image/bottle-micro-1.png",
-      count: 1,
-    },
-  ],
-  email: "123@gmail.com",
-};
